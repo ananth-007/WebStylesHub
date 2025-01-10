@@ -3,47 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Tata Strive - login</title>
-    <style>
-      fieldset{
-        border:2px solid black;
-        width:45%;
-        margin-left:auto;
-        margin-right:auto;
-        margin-top:50px;
-        border-radius:20px;
-      }
-      .login{
-        display:block;
-        margin-left:50px;
-      }
-      .login input{
-        border-radius:2px;
-      }
-      #btn{
-        display:block;
-        margin-left:auto;
-        margin-right:auto;
-        border-radius:15px;
-        padding:5px 30px;
-        background-color:#B0B8B4;
-        color:black;
-      }
-    </style>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-  <fieldset>
-    <h2 style="text-align:center;">LOGIN</h2>
-    <div class="login">
-      <label>E-mail: </label><br>
-      <input type="text" name="E-mail" placeholder="Enter your mail"/><br><br>
-      <label>Enter Password: </label><br>
-      <input type="password" name="password" placeholder="enter your password"/><br><br><br>
-    </div>
-    <button id="btn">SUBMIT</button>
-    <p style="text-align:center;">Don't have an account? <a href="signup.html">Sign Up</a></p>
-  </fieldset>
-  <footer>
-
-  </footer>
+    <form>
+      <fieldset>
+        <div class="cent">
+            <h2>LOGIN</h2>
+            <p>Welcome to login page</p>
+        </div>
+        <div class="login">
+          <input type="text" name="E-mail" placeholder="Email Address" required/><br><br>
+          <input type="password" name="password" placeholder="Enter password" required/><br><br><br>
+        </div>
+        <button id="btn">SUBMIT</button>
+        <p style="text-align:center;">Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </fieldset>
+    </form>
 </body>
 </html>
