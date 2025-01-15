@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .accordion{
+            width:70%;
+            margin: auto auto;
+            margin-top:100px;
+            border: 2px solid black;
+            border-radius:8px;
+        }
+        h2{
+            text-align:center;
+        }
+        .navbar-brand img{
+            border-radius:5px;
+        }
+        .carousel-inner{
+            width:71%;
+            margin:auto auto;
+        }
+        .col-xl-custom {
+            position: relative;
+            width: 100%;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        @media (min-width: 1400px) {
+            .col-xl-custom {
+                flex: 0 0 20%;
+                max-width: 20%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1399px) {
+            .col-xl-custom {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+        }
+        .card {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 320px;
+        }
+        .mb-4 {
+            margin-bottom: 2rem !important;
+        }
+    </style>
+</head>
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxYljLXD8m3pRVH4hF8ENUqGKqVQrfYDPRrg&s" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Anime
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://hianime.to/movie">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://hianime.to/tv">TV Series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://hianime.to/most-popular">Most Popular</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://hianime.to/top-airing">Top Airing</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Partners
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://hianime.to/">hianime</a></li>
+                        <li><a class="dropdown-item" href="https://www.crunchyroll.com/">Crunchyroll</a></li>
+                        <li><a class="dropdown-item" href="https://9anime.org.lv/">9Anime</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<br><br>
+<!--Carousel-->
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+            <img src="https://i.pinimg.com/736x/73/fa/58/73fa58d98f689c6f3bd6a06fc179da5e.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://i.pinimg.com/736x/84/68/44/84684467e008de73218276315a431ecd.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://i.pinimg.com/736x/60/a4/a6/60a4a6b12851ec2731b7f58c2c4ed7f4.jpg" class="d-block w-100"  alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<br><br>
+
+<!--Card-->
+<div class="container-fluid my-4">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-xl-custom mb-4">
+            <div class="card" style="width: 16rem;">
+                <img src="https://i.pinimg.com/236x/4e/54/e8/4e54e882356e01cd1c1ccccd5b71a27a.jpg" height="500px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Monkey D Luffy</h5>
+                    <p class="card-text">Monkey D. Luffy, commonly known as "Straw Hat Luffy" or simply "Straw Hat", is the founder, captain, and strongest combatant of the increasingly infamous and powerful Straw Hat Pirates.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-custom mb-4">
+            <div class="card" style="width: 16rem;">
+                <img src="https://i.pinimg.com/474x/3d/87/a6/3d87a6d8019aa0877fa5c67ca9bd6302.jpg" height="500px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Roronoa Zoro</h5>
+                    <p class="card-text">Roronoa Zoro, also known as "Pirate Hunter" Zoro, is the combatant of the Straw Hat Pirates, is publicly recognized as the right-hand man and number two of his crew's captain Monkey D. Luffy.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-custom mb-4">
+            <div class="card" style="width: 16rem;">
+                <img src="https://i.pinimg.com/474x/f9/2e/36/f92e3698a0f688f304ae1ec4259ef099.jpg" height="500px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Shanks</h5>
+                    <p class="card-text">Red-Haired Shanks, the captain of the Red Hair Pirates, is one of the Four Emperors ruling the New World, known for his incredible power, charisma, and status as Luffy's inspiration.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-custom mb-4">
+            <div class="card" style="width: 16rem;">
+                <img src="https://i.pinimg.com/736x/b6/2e/49/b62e492d47b130f5c9acf3ae0cb1debb.jpg" height="500px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Yoriichi</h5>
+                    <p class="card-text">Yoriichi Tsugikuni, the legendary Demon Slayer, is revered as the strongest swordsman in history, known for creating the Sun Breathing technique and nearly defeating Muzan Kibutsuji.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-custom mb-4">
+            <div class="card" style="width: 16rem;">
+                <img src="https://i.pinimg.com/474x/2a/7b/03/2a7b03d7033c47c07d03cdbbf08308d2.jpg" height="500px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Obito Uchiha</h5>
+                    <p class="card-text">Obito Uchiha, the enigmatic shinobi of Konohagakure, is remembered for his tragic journey, manipulation by Madara Uchiha, and pivotal role in the Fourth Great Ninja War.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+
+
+<!--Accordion-->
+<h2>Anime Characters</h2>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <strong>Monkey D. Luffy</strong>
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>Monkey D. Luffy</strong> is the main protagonist of <strong>One Piece</strong>, created by Eiichiro Oda. He dreams of becoming the King of the Pirates by finding the legendary treasure, One Piece. Luffy possesses rubber-like abilities from the Gomu Gomu no Mi Devil Fruit and leads the Straw Hat Pirates on thrilling adventures across the seas. Known for his unwavering spirit and strong sense of friendship, he has become an iconic figure in anime and manga.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <strong>Roronoa Zoro</strong>
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>Roronoa Zoro</strong> is a prominent character in <strong>One Piece</strong>, created by Eiichiro Oda. He is the first member and vice captain of the Straw Hat Pirates, known for his exceptional swordsmanship and his unique <strong>Santoryu</strong> (Three Sword Style) technique. Zoro's goal is to become the world's greatest swordsman, a promise made to his childhood rival, Kuina. Fiercely loyal to his captain, Monkey D. Luffy, he plays a crucial role in the crew's adventures while showcasing a determined and headstrong personality.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <strong>Shanks</strong>
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>Shanks</strong>, also known as "Red-Haired" Shanks, is a pivotal character in One Piece, serving as the captain of the Red-Haired Pirates and one of the Four Emperors. He significantly influenced Monkey D. Luffy's journey by inspiring him to become a pirate and gifting him the Gomu Gomu no Mi Devil Fruit. Shanks is renowned for his exceptional swordsmanship and mastery of all three types of Haki, making him one of the most formidable characters in the series. Despite his fearsome reputation, he often seeks diplomatic resolutions to conflicts, aiming to maintain balance in the pirate world while being a mentor figure to Luffy.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                <strong>Yoriichi Tsugikuni</strong>
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>Yoriichi Tsugikuni</strong> is a legendary character from Demon Slayer, known as the most powerful Demon Slayer in history. He is the originator of the Sun Breathing techniques, which form the basis for all subsequent breathing styles used by demon slayers. Yoriichi was renowned for his unmatched swordsmanship and innate talent, enabling him to come close to defeating Muzan Kibutsuji, the series' main antagonist. Despite living nearly 500 years ago, his legacy continues to influence the current generation of demon slayers, particularly through characters like Tanjiro Kamado, who strive to uphold his ideals and combat skills.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                <strong>Obito Uchiha</strong>
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>Obito Uchiha</strong> is a complex character from the anime and manga series Naruto, originally a member of the Uchiha clan and a teammate of Kakashi Hatake and Rin Nohara. Believed to have died during a mission, he was saved by Madara Uchiha, who later manipulated him into becoming the leader of the Akatsuki. Obito is known for his mastery of the Sharingan and his involvement in the Eye of the Moon Plan, which aimed to trap the world in an illusion. His character arc revolves around themes of redemption, as he ultimately sacrifices himself to save his friends, realizing the importance of bonds and loyalty.
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+
+</body>
+</html>
